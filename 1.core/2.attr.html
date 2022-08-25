@@ -1,0 +1,18 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    console.log($('a').attr('href')) //attr('attribute(속성).name') - 같은 이름의 0번째 속성의값을 불러온다
+
+    $('a').attr('href', 'http://www.daum.net/')   // 1번째 value(모든 원소)를 2번째 value로 바꾼다.
+                                                  // google이든 naver이든 전부 바뀐 value의 주소로 적용된다.
+    $('a').attr({
+        href: 'http://jquery.com',  // 객체로 나열할 시, 요소를 골라서 부분적으로 바꿀수 있다.
+        target: '_blank'            // target.blank - 빈 창에서 열린다(새화면)
+    })
+
+    $('a').removeAttr('target') // target속성을 지웠기때문에 blank에서 현재창으로 뜬다.
+})
+</script>
+          <!--attribute-->
+<a href='https://www.google.co.kr/'>google</a>
+<a href='https://www.naver.com/'>naver</a>

@@ -1,0 +1,26 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    //$('div').appendTo($('hr'))  // (..).appendTo($(~~))   ~~에 ..를 병합한다(append한다) 
+    // 과제 : 위를 append()로 refactoring 하라.
+    $('hr').append($('div'))
+})
+</script>
+
+<style>
+div {
+    background-color: orange;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 2.5em;
+}
+
+hr {
+    border: .1rem solid;
+}
+</style>
+
+<div></div>
+<div></div>
+<hr>
+<hr>

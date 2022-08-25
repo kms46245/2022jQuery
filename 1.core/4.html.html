@@ -1,0 +1,33 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    console.log($('h1').html()) 
+
+    $('footer').html('<mark>footer</mark>') // mark객체의 footer를 'footer의 자리에 만들게 된다.'
+    console.log($('footer').html())
+
+    console.log($('header').find('h1').eq(1).html())
+    $('header').find('h1').eq(1).html('<hr>')   // world가 있던자리에 <hr>이 들어간 것이다.
+
+    $('ul').find('li').eq(2).html('index: 2')   // li의 인덱스번호2번을 찾아서 'index: 2'를 넣는다.
+
+    $('ul').find('li').eq(2).html('index: 2').end()
+        .eq(3).html('index: 3'). end()
+        .eq(4).html('index: 4')
+})
+</script>
+
+<header>
+    <h1><b>hello</b></h1>
+    <h1>world</h1>
+</header>
+
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+<footer></footer>

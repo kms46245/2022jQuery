@@ -1,5 +1,14 @@
-<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
 <script>
 // jQuery를 사용하는 목적 - 만들어져있는 method들을 활용해 동적으로 생성을 하기위해
-jQuery(document).ready(() => $('body').append('<p>one</p>')) 
+    jQuery(document).ready(() => $('body').append('<p>one</p>'))
+    
+    $(document).ready(() => $('body').append('<p>two</p>'))
+                                        //p-element / textnode 가 들어있다.
+    let readyFn = () => $('body').append('<p>three</p>')
+    $(document).ready(readyFn)
+
+    // 변수의 이름에 $가 붙으면 JQuery의 어떤것으로 잘못 알고있을수 있다.
+    // 그러므로 변수명에 $붙이는것을 지양해야한다.
+    $(() => $('body').append('<p>four</p>'))
 </script>

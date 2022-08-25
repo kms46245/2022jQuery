@@ -1,0 +1,25 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('div').clone().appendTo('hr')     // appendTo한 대상은 clone()이다.
+})
+</script>
+
+<style>
+    div {
+        background-color: orange;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 2.5em;
+    }
+    
+    hr {
+        border: .1rem solid;
+    }
+</style>
+
+    
+<div></div>
+<div></div>
+<hr>
+<hr>

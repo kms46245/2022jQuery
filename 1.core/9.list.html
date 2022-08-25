@@ -1,0 +1,23 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    for(i = 0; i < 10; i++) {
+        $('<li>',{
+            html: `item ${i}`
+        }).appendTo('ul')
+    }   
+})
+</script>
+
+<ul>
+</ul>
+
+<!-- 과제]
+    아래와 같은 ul을 만들어라.
+    <ul>
+        <li>item 0</li>
+        <li>item 1</li>
+        ..
+        <li>item 9</li>
+    </ul>
+-->
