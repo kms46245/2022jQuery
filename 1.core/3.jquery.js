@@ -19,7 +19,7 @@ $('#contents ul.people li')
 </div>
 */
 
-$('a.external:first')
+$('a.external:first')       // <-> last - 마지막것을 리턴
 /*
 <a class='external'></a> -> first
 <a class='external'></a> -> second
@@ -36,6 +36,7 @@ $('tr:odd')  // 홀수번째의 tr을 호출
 $('div:visible')
 
 $('div:gt(1)')  // gt(index) - greater then > index의 value보다 크다
+                //  <-> lt(index) - less then > index의 value보다 작다
 /*
 <div></div>
 <div></div>
