@@ -1,0 +1,17 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('body').data('foo', 10)               // data(key, value) - 해당 콜렉션에 데이터를 직접넣는다.
+    $('body').data('bar', {isManual: true}) // value는 어떤 타입이든 다 들어올 수 있다.
+    $('body').data({
+        baz: [1, 2],
+        hoi: 'hello'
+    })  // n개의 데이터를 삽입할땐 객체를 이용한다.
+    
+    console.log($('body').data('foo'))  // key만 입력하면 value를 읽어온다.
+    console.log($('body').data('bar'))
+
+    console.log($('body').data())       // 해당 콜렉션 내에있는 모든 entry들을 읽어온다.
+})
+</script>
+
