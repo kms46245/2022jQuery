@@ -1,0 +1,24 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('div').insertAfter('hr')  // (...).insertAfter(!!) - !!의 다음에 ...를 삽입한다.  // 안에넣는 append와는 다르다.  
+})
+</script>
+
+<style>
+    div {
+        background-color: orange;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 2.5em;
+    }
+    
+    hr {
+        border: .1rem solid;
+    }
+</style>
+    
+<div></div>
+<div></div>
+<hr>
+<hr>

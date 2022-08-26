@@ -22,14 +22,14 @@ $('#contents ul.people li')
 $('a.external:first')       // <-> last - 마지막것을 리턴
 /*
 <a class='external'></a> -> first
-<a class='external'></a> -> second
+<a class='external'></a> -> last
 */
 
-$('tr:odd')  // 홀수번째의 tr을 호출
+$('tr:odd')  // 짝수번째의 tr을 호출 <-> even - 홀수번째를 호출 (왜냐하면 컴퓨터는 0부터이므로)
 /*
-<tr/>   // 
+<tr/>   // even
 <tr/>   // odd
-<tr/>   //  
+<tr/>   // even
 <tr/>   // odd
 */
 

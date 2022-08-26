@@ -1,0 +1,20 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    //jquery object라는것 명시를 위해 일부러 변수명에 $를 붙였다.(원래는 안붙이는게 좋음)
+    let $div1 = $('div')
+    let $div2 = $div1.eq(0)         // eq - div1 collcection의 0번째 요소를 콜렉션으로 꺼냄
+    let div3 = $div1.get(0)         // get - div1 collection의 0번째 요소를 꺼냄(jquery가아님)
+    console.log($div1, $div2, div3)
+    console.log(typeof $div1, typeof $div2, typeof div3)
+
+    let $div11 = $('div')           // 같은 콜렉션을 부르더라도 물리적으론 jquery는 새로운 콜렉션을 만든다. 
+    let $div22 = $div11.eq(0)
+    let div33 = $div11.get(0)       // 다만, 콜렉션안의 element는 물리적으로도 똑같다.
+    console.log($div1 == $div11, $div2 == $div22, div3 == div33)
+
+    
+})
+</script>
+
+<div></div>

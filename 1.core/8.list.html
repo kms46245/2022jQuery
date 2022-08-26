@@ -1,11 +1,16 @@
 <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
 <script>
 $(() => {
-    for(i = 0; i < 10; i++) {
+    // rendering을 10번 반복하게 되므로 효율이 떨어진다.
+    /*for(i = 0; i < 10; i++) {
         $('<li>',{
             html: `item ${i}`
         }).appendTo('ul')
-    }   
+    }*/
+    let items = []
+    for(let i = 0; i < 10; i++)
+        items.push(`<li>item ${i}</li>`)
+    $(items.join('')).appendTo('ul')
 })
 </script>
 

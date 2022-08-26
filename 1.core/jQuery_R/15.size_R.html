@@ -1,0 +1,20 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    let h1 = $('h1')
+
+    console.log(h1.width(), h1.height())    // width.height - 해당 콜렉션(컨텐츠)의 길이와 너비를 구한다.
+                                            // 너비는 창의 길이에 따라 달라진다. 
+    h1.width('5rem')    // 파라미터로 수치를 지정할 수 있다.
+    h1.height('5rem')
+})
+</script>
+
+<style>
+    h1 {
+        border: .1rem solid;
+    }
+</style>
+    
+<h1>HELLO</h1>
+<h1>WORLD</h1>

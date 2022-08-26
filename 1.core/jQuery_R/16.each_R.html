@@ -1,0 +1,19 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('li').each((i, e) => console.log(i, e))   // each((index, e) => ) - iterating
+
+    /* 과제] 다음 출력이 나오도록 작성하라.
+    0 'a'
+    1 'b'
+    2 'c'
+    */
+    $('li').each(i => console.log(i, $('li')[i].id))
+})  
+</script>
+
+<ul>
+    <li id='a'>A</li>
+    <li id='b'>B</li>
+    <li id='c'>C</li>
+</ul>

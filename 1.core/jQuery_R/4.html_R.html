@@ -1,0 +1,31 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    console.log($('h1').html()) // !!!.html() - !!!collection중 첫번째(0) collection의 attribute의 속성을 리턴
+
+    $('footer').html('<mark>foot</mark>')   // html(...) - ...속성을 해당 collection에 작성
+    console.log($('footer').html())
+
+    console.log($('header').find('h1').eq(1).html())    // !!!.find(...).eq(index)   - !!!collection의 index번째의 ...collection
+    $('header').find('h1').eq(1).html('<hr>')   // world 대신 <hr>이 들어간 모습
+
+    $('ul').find('li').eq(2).html('index: 2').end()   // end() - !!!.find(...)로 되돌아간다.
+        .eq(3).html('index: 3'). end()  // chainning이 가능
+        .eq(4).html('index: 4')
+})
+</script>
+
+<header>
+    <h1><b>hello</b></h1>
+    <h1>world</h1>
+</header>
+
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+<footer></footer>

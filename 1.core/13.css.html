@@ -1,0 +1,14 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    console.log($('h1').css('font-size'))   // font-size - param없을때는 2rem
+    console.log($('h1.big').css('font-size', '3rem'))   // 2번째 파라미터로 사이즈를 지정할 수 있다.
+    $('h1.big').css({
+        'font-size': '4rem',
+        'color': 'red'                        // 파라미터를 객체로 하여, 여러 값들을 조정 할 수 있다.
+    })
+})
+</script>
+
+<h1>HELLO</h1>
+<h1 class='big'>WORLD</h1>

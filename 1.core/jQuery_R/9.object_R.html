@@ -1,0 +1,17 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    let $div1 = $('div')
+    let $div2 = $div1.eq(0)     // eq(index) - 해당 콜렉션의 index번째 요소를 콜렉션으로 리턴
+    let div3 = $div1.get(0)     // get(index) - 해당 콜렉션의 index번째 요소를 리턴(콜렉션이 아님)
+    console.log($div1, $div2, div3)
+    console.log(typeof $div1, typeof $div2, typeof div3)
+
+    let $div11 = $('div')           // 같은 콜렉션을 부르더라도 물리적으론 jquery는 새로운 콜렉션을 만든다. 
+    let $div22 = $div11.eq(0)
+    let div33 = $div11.get(0)       // 다만, 콜렉션안의 element는 물리적으로도 똑같다.
+    console.log($div1 == $div11, $div2 == $div22, div3 == div33)
+})
+</script>
+
+<div></div>

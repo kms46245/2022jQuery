@@ -4,10 +4,13 @@ $(() => {
     $('<div>').appendTo('hr')      // <...> - ...를 새로만든다.
     
     // 두번째 파라미터(객체)를 적용함으로서 스타일도 지정할 수있다.
-    $('<div>', {
+    /*$('<div>', {
         html: '<p class="center">red</p>',  // p.center를 표현함
         class: 'red'                 // .red를 표현
     }).appendTo('hr')   // 자체는 객체를 생성만 할뿐 출력은없기에, appendTo로 생성한것을 사용하면서 출력된다.
+    */
+    //과제] 위 $() 파라미터를 하나로 줄여라.
+    $('<div class="red"><p class="center">red</p></div>').appendTo('hr')
 })
 </script>
 

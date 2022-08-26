@@ -1,0 +1,42 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('<div>').appendTo('hr')   // <...> - ...collection을 새로 만든다.
+    
+    /*$('<div>', {
+        html: '<p class="center">red</p>',  //p.center를 표현
+        class: 'red'                        //.red를 표현
+    }).appendTo('hr')   // <>는 객체를 생성만할 뿐 출력은 없다.
+                        // 여기에서는 appendTo()를 이용해 출력이 되도록했다.
+    */
+                        //과제] 위 $() 파라미터를 하나로 줄여라.
+    $('<div class="red"><p class="center">red</p>').appendTo('hr')
+})
+</script>
+
+<style>
+    div {
+        background-color: orange;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 2.5em;
+    }
+    
+    hr {
+        border: .1rem solid;
+    }
+
+    .red {
+        background-color: red;
+        position: relative;
+    }
+
+    p.center {
+        position: absolute;
+        left: 2rem;
+        top: 1rem;
+        font-weight: bold;
+    }
+</style>
+
+<hr>

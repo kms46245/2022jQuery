@@ -1,0 +1,20 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    console.log($('a').attr('href'))
+    //attr('attribute.name(속성의 이름)') - 같은 이름의 0번째 속성 값을 불러온다.
+
+    $('a').attr('href', 'http://www.daum.net/')
+    // 1번째 파라미터(해당 이름을 가진 모든 원소)를 2번째 파라미터(속성값)으로 바꾼다.
+
+    $('a').attr({
+        href: 'http://jquery.com',  // 속성값을 객체로 만들면, 여러가지의 속성값을 바꿀수 있다.
+        target: '_blank'    // target.blank - 하이퍼링크의 타겟을 새로운 창에서 열게한다.
+    })
+
+    $('a').removeAttr('target') // removerAttr(...) - ...속성을 지운다.
+})
+</script>
+
+<a href='https://www.google.co.kr.'>google</a>
+<a href='https://www.naver.com.'>naver</a>

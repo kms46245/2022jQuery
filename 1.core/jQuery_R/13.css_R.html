@@ -1,0 +1,14 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    console.log($('h1').css('font-size'))   // css(font-size) - 해당 콜렉션의 스타일을변경 > font-size는 수치 파라미터만 주지않으면 2rem
+    console.log($('h1.big').css('font-size', '3rem'))   // 2번째 파라미터에 수치를 줄수 있다.
+    $('h1.big').css({
+        'font-size': '4rem', // 파라미터를 객체로 하여, 여러 값들을 조정 할 수 있다.
+        color: 'red'       // 두번째 파라미터부터는 이름에 ''가 없어도 된다.
+    })
+})
+</script>
+
+<h1>HELLO</h1>
+<h1 class='big'>WORLD</h1>

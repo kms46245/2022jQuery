@@ -1,0 +1,26 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    console.log($('.4').parent())   // parent - 해당 콜렉션의 직계부모를 리턴
+
+    console.log($('.4').parents())  // parents - 해당 콜렉션의 html까지의 부모를 전부 리턴
+
+    console.log($('.4').parents('div')) // parents(...) - 해당 콜렉션에 ...가 포함된 부모들을 리턴
+
+    console.log($('.4').parentsUntil('div.1'))  //parentsUntil(...) - 해당 콜렉션의 ...파라미터 미만의 부모들을 리턴
+
+    console.log($('.4').closest('div'))    // closest(...) - 해당 콜렉션을 포함한 가장 가까운 ... 파라미터를 가진 콜렉션을 리턴
+})
+</script>
+
+<pre>
+    <div class='1'>
+        <div class='2-1'>
+            <div class='3'>
+                <div class='4'></div>
+            </div>
+        </div>
+        <div class='2-2'></div>
+        <div class='2-3'></div>
+    </div>
+</pre>

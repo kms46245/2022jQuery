@@ -9,9 +9,7 @@ $(() => {
     console.log($('header').find('h1').eq(1).html())
     $('header').find('h1').eq(1).html('<hr>')   // world가 있던자리에 <hr>이 들어간 것이다.
 
-    $('ul').find('li').eq(2).html('index: 2')   // li의 인덱스번호2번을 찾아서 'index: 2'를 넣는다.
-
-    $('ul').find('li').eq(2).html('index: 2').end()
+    $('ul').find('li').eq(2).html('index: 2').end()   // li의 인덱스번호2번을 찾아서 'index: 2'를 넣는다.
         .eq(3).html('index: 3'). end()
         .eq(4).html('index: 4')
 })

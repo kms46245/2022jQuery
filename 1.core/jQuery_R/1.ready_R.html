@@ -1,0 +1,13 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+// jQuery의 사용목적 - 준비된 method를 통해 동적으로 생성하기 위함
+    jQuery(document).ready(() => $('body').append('<p>one</p>'))
+    
+    $(document).ready(() => $('body').append('<p>two</p>'))
+
+    let readyFn = () => $('body').append('<p>three</p>')
+    $(document).ready(readyFn)
+
+    $(() => $('body').append('<p>four</p>'))
+    // 변수명에 $가 붙으면 jQuery의 어떤 것으로 헷갈릴 수 있기에 변수명에 $붙이는 것은 지양해야한다.
+</script>

@@ -1,0 +1,21 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    let h1 = $('h1')
+
+    h1.addClass('blue') // addClass(...(classSelector)) - 해당 스타일클래스를 적용한다.
+    h1.removeClass('blue')  // removeClass - 해당 클래스를 제거
+    h1.toggleClass('blue')  // toggleClass - on/off형식으로 선언할때마다 넣었다 제거할수있다.
+
+    h1.hasClass('blue') && console.log('blue')     // hasclass - 해당 클래스를 보유하고있는지
+})
+</script>
+
+<style>
+.blue {
+    color: blue;
+}    
+</style>
+
+<h1>HELLO</h1>
+<h1>WORLD</h1>

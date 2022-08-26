@@ -1,0 +1,20 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    console.log($('.1').children())     // 해당 콜렉션의 한칸아래 자식들을 리턴
+    console.log($('.1').find('div'))    // 해당 콜렉션의 모든 자식 콜렉션을 찾는다.
+                                        // 순서는 leaf node(콜렉션의 마지막 노드)까지 간뒤 그다음 콜렉션으로 넘어간다.
+})
+</script>
+
+<pre>
+    <div class='1'>
+        <div class='2-1'>
+            <div class='3'>
+                <div class='4'></div>
+            </div>
+        </div>
+        <div class='2-2'></div>
+        <div class='2-3'></div>
+    </div>
+</pre>
