@@ -1,0 +1,15 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $(':password').keydown(e => {
+        if(e.keyCode == 13) $('form').submit()
+
+    })
+})
+</script>
+
+<form>
+    <input type='text' name='id'/>
+    <input type='password' name='pw'/>
+    <input type='submit'/>
+</form>

@@ -1,0 +1,17 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('button').click('abel', e => {    // 파라미터를 넣을 value로 주고 e를 해당 함수에 넣어
+        let userName = $('input').val() // 클릭시 이벤트를 넣어준다
+        if(userName == e.data){
+            $('span').text(` vaild: ${e.data}`).show().fadeOut(1000) // show.fadeout을 통해 사라지는 시간을 지연시켜준다.
+        }
+        else $('span').text(` invalid: ${userName}`)
+    })                                     
+})
+</script>
+
+<form>
+    <input type='text' name='userName' placeholder='사용자명'/><span></span><br>
+    <button type='button'>submit</button>
+</form>

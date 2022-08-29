@@ -1,0 +1,33 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    /*$('#wrap').on({
+        change() {
+            $('span').text($(this).val())
+        }
+    })*/
+    // 과제]: span에 메세지가 출력되도록 하라.
+    /*
+    $('#wrap').on({
+        change() {
+            $('span').text($(this).val())
+        }
+    }, '.c')*/
+    $('#wrap').on('change', '.c', function(){   // 2번째 파라미터에 대상, 3번째파라미터에 작동시킬 이벤트를 써도된다.
+        $('span').text($(this).val())
+    })
+})
+</script>
+
+<div id='wrap'>
+    <select id='fruit' class='c'>
+        <option>select1</option>
+        <option>select2</option>
+    </select>
+    <input type='checkbox' value='check' class='c'/>
+    <input type='radio' value='radio' class='c'/>
+
+    <input type='text' class='c'/> <!-- enter까지 해야, change 발동 -->
+</div>
+
+<span></span>

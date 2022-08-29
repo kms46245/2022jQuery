@@ -1,0 +1,11 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('input').keyup(function() {   // keyboard의 이벤트는 3개가 있다. keyup, keydown, keypress
+        $('span').text($(this).val())
+    })
+})
+</script>
+
+<input type='text'/>
+<span></span>
