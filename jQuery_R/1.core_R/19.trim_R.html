@@ -1,0 +1,12 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    let phrase = ' hello world '
+
+    console.log(phrase.trim())  // trim - 앞뒤로 빈칸을 제거
+    // 과제] trim의 결과를 확인토록, 위 parameter를 수정하라.
+    console.log('|') + phrase.trim() + ('|')
+
+    console.log('|' + $.trim(phrase) + ('|'))   // utility
+})
+</script>

@@ -1,0 +1,55 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    // 과제] text 변수에, <input type='text'>를 찾아서 담아라.
+    let text = $(':text')
+    console.log(text)
+    console.log('|' + text.val() + '|')  // val - 해당콜렉션의 value를 리턴
+
+    text.val(' world ') // val에 값을 넣으면 해당값으로 들어간다.
+    // 과제] text의 value를, trim해서 text에 저장하라.
+    text.val(text.val().trim())
+    //text.val($.trim(text.val())) - utility
+    console.log('|' + text.val() + '|')
+
+    text.val((i, v) => `hello ${v}`)    // val parameter로 함수도 가능
+
+    //
+    $(':checked').each((i, e) => console.log(e))
+    //과제] 아래의 결과를 출력하라.
+    /*
+    night
+    mountain
+    apple
+    */
+    //$(':checked').each((i, e) => console.log(e.value))    // element를 객체관점으로
+    $(':checked').each((i, e) => console.log($(e).val()))   // element를 jQuery의 관점으로
+                                                            // $를 붙혀 jQuery를 사용할것을 명시해야 오류나지않음
+
+    //
+    $('input').val(['noon', 'sea', 'banana'])   // noon과 sea는 선택되지만, banana는 선택되지않았다.
+    $('#fruit').val('banana')  // select는 따로 선언해줘야한다.
+    $('#greens').val(['cucumber', 'carrot'])    // multiple에서는 배열로 여러개를 선택할 수 있다.
+})
+</script>
+
+<form>
+    <input type='text' value=' hello '/><br>
+
+    <input type='checkbox' value='night' checked/>밤
+    <input type='checkbox' value='noon'/>낮 <br>
+
+    <input type='radio' value='mountain' checked/>산
+    <input type='radio' value='sea'/>바다 <br>
+
+    <select id='fruit'>
+        <option>apple</option>
+        <option>banana</option>
+    </select>
+
+    <select id='greens' multiple>   <!-- multiple의 경우 화면내에 나오더라도 체크가 안되있는걸로 인지-->
+        <option>cucumber</option>
+        <option>cabbage</option>
+        <option>carrot</option>
+    </select>
+</form>

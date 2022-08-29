@@ -1,0 +1,33 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('button').click(() => {
+        // 과제] userName field에 값이 입력됐으면, 을 구현하라.
+        if($(':text').val()) $('form').submit() // submit - submit 이벤트를 발생
+                                                // submit를 함으로써 폼(text)에 있는 값이 직접 넘어간다.
+        // 과제] '사용자명을 입력하세요.' error messag를 <span>에 출력하라.
+        //else $('span').append('<mark>사용자명을 입력하세요.</mark>')    // using append
+        //else $('span').html('<mark>사용자명을 입력하세요.</mark>')  // using html
+        //else $('span').text('사용자명을 입력하세요.')                 // using text
+
+        //과제: 에러메세지를 빨간색으로 출력하라.
+        //else $('span').text('사용자명을 입력하세요.').css('color', 'red')
+
+        /* 과제: 에러메세지를 빨간색으로 출력하라. 그리고,
+                 username field의 border를 점선으로 바꿔라.*/
+        else{ 
+            $('span').text('사용자명을 입력하세요.').css('color', 'red')
+            $(':text').css('border', 'dotted')
+        }
+
+    })    
+
+})
+</script>
+
+<form>
+    <input type='text' name='userName' placeholder='사용자명'/><span></span><br>
+    <button type='button'>submit</button>
+    <!-- form을 작성하다 - 유저의 입장에서 텍스트필드에 작성한다
+         form을 제출하다 - 유저의 입장에서 submit 버튼을 누른다. -->
+</form>

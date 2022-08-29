@@ -1,0 +1,32 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    let greet = ' hello world '
+    log(greet.replace(' ', ''))
+    log(greet.replaceAll(' ', ''))
+    log(greet.replace(/\s/g, ''))   // 전체 = replaceAll
+    log(greet.replace(/^\s/g, ''))  // 머리 부분에만 적용
+    log(greet.replace(/\s$/g, ''))  // 꼬리 부분에만 적용
+    log(greet.replace(/^\s|\s$/g, ''))
+
+    greet = '1-2-3,4,5'
+    console.log(greet.replace(/-/g, ''))
+    console.log(greet.replace(/,/g, ''))
+    console.log(greet.replace(/[-,]/g, '')) // 여러개를 대상으로 할 때
+
+    greet = '1-,2-,3'
+    console.log(greet.replace(/-,/g, '')) // 여러개 자체로 하나의 덩어리일때
+
+    greet = 'hello\nworld'
+    console.log(greet)
+    //과제] helloworld 가 출력 되게 하라.
+    console.log(greet.replace(/\n/g,''))
+
+    
+})
+
+function log(str) {
+    console.log('|' + str + '|')
+}
+
+</script>

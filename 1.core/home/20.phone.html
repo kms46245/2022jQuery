@@ -2,10 +2,8 @@
 <script>
 $(() => {
     // 과제] 전화번호를 숫자만으로 정제하라.
-    
-    console.log($('input').val())
-
-    $('input').val().toString()
+    //$('input').val($('input').val().split('-').join(''))
+    $('input').val($('input').val().replaceAll('-',''))
 })
 </script>
 

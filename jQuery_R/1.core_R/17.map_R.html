@@ -1,0 +1,25 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('li').map((i, e) => console.log(i, e))    // map - each와 같은 사용법
+
+    let collection = $('li').map((i, e) => e.id) // 변수로 받을때는, 받을 값을 지정해줘야함
+    console.log(collection)
+    // 과제] 위 get() return array를 'abc'로 serializing하라.
+    console.log(collection.get().join(''))
+
+    //map utility
+    // 주의) each-utility와 다르게 순서가 element, index순이다.
+    $.map(collection.get(), (e, i) => console.log(i, e))
+
+    // 여기서도 마찬가지로 순서가 value, key순이다.
+    let array = $.map({name: 'adelia', age: 20}, (v, k) => v)
+    console.log(array)
+})
+</script>
+
+<ul>
+    <li id='a'>A</li>
+    <li id='b'>B</li>
+    <li id='c'>C</li>
+</ul>

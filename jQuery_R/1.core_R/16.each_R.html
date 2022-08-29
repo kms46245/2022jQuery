@@ -1,0 +1,30 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    //$('li').each((i, e) => console.log(i, e))   // each((index, e) => ) - iterating
+
+    /* 과제] 다음 출력이 나오도록 작성하라.
+    0 'a'
+    1 'b'
+    2 'c'
+    */
+    //$('li').each(i => console.log(i, $('li')[i].id))
+    $('li').each((i, e) => console.log(i, e.id))
+
+    //Utility - java의 static과 비슷하다. 주체가없으므로 jQuery로 call
+    jQuery.each([1, 2, 3, 4], (i , e) => console.log(`[${i}]: `, e))
+
+    //utility는 배열을 대상으로 하기에 콜렉션을 배열화시켜준다.
+    //toArray() - collection을 배열로 전환
+    $.each($('li').toArray(), (i, e) => console.log(i, e))
+
+    // util-each는 collection이 아니기만하면 가능. (오브젝트도 가능)
+    $.each({name: 'adelia', age: 20}, (k, v) => console.log(k, ':', v))
+})  
+</script>
+
+<ul>
+    <li id='a'>A</li>
+    <li id='b'>B</li>
+    <li id='c'>C</li>
+</ul>
