@@ -1,0 +1,45 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    let table = $('tbody')
+
+    $('button').click(() => {
+        $.ajax({
+            url: '2.data.json',
+            success: data => {
+                //과제] table을 채워라.
+                /*for(let i = 0; i < $('tbody tr').length; i++) {
+                    for(let j = 0; j < $('tbody tr').eq(i).children().length; j++) {
+                        $('tbody tr').eq(i).children().eq(j).text(Object.values(data.fruits[i])[j])
+                    }
+                }*/
+                let fruits = data.fruits
+                let fruit, col, val, tr, td
+
+                for(let row in fruits) {
+                    fruit = fruits[row]
+                    tr = table.find('tr').eq(row)
+                    col = 0
+                    for(let key in fruit) {
+                        val = fruit[key]
+                        td = tr.find('td').eq(col++)
+                        td.text(val)
+                    }
+                }
+            }
+        })
+    })    
+})
+</script>
+
+<button type='button'>load</button>
+
+<table>
+    <thead>
+        <tr><th>이름</th><th>가격</th><th>기한</th><th>생산지</th></tr>
+    </thead>
+    <tbody>
+        <tr><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td></tr>
+    </tbody>
+</table>

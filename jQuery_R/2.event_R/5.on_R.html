@@ -1,0 +1,58 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    // 자식에게 핸들러를 준다.
+    $('wrap').on({
+        mouseenter: function() {    //객체를 function으로서도 부를 수 있다.
+            $(this).removeClass().addClass('circle mouseenter')
+        },
+        // 과제: method 표기법으로 mouseleave handler를 작성하라.
+        //       background 색을 초기화하라.
+        mouseleave() {
+            $(this).removeClass().addClass('circle mouseleave')
+        }
+    }, '.circle')
+
+    // 본인에게 핸들러를 준다.
+    //$('button').on('click', () => $('wrap').append($('.circle'))) // 붙는기준이 wrap이 되기때문에 아래쪽으로 붙어, 이동된것처럼 보인다.
+    //$('button').on('click', () => $('#wrap').append($('.circle').clone()))
+    // 과제] create 버튼을 누를 때, 새로운 원 하나가 append 되도록 하라.
+    //$('button').on('click', () => $('<div class = "circle"/>').appendTo('#wrap')) // my answer
+    //$('button').on('click', () => $('#wrap').append($('.circle').eq(0).clone()))  // 여러 개의 원중 하나만 골라서 복제
+    $('button').on('click', () => $('#wrap').append($('.circle').first().clone()))
+})
+</script>
+
+<style>
+    #wrap {
+        margin: 1rem;
+    } 
+    
+    .circle {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 2.5rem;
+        border: .1rem solid;
+    }
+    
+    .square {
+        width: 5rem;
+        height: 5rem;
+        border: .1rem solid;
+    }
+    
+    .mouseenter {   
+        background: red;
+    }
+    
+    .mouseleave {
+        background: '';
+    }
+    </style>
+    
+    <button type='button'>create</button>
+    
+    <div id='wrap'>
+        <div class='circle'></div>
+        <div class='square'></div>
+    </div>

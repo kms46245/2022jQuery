@@ -1,0 +1,17 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('button').click('abel', e => {
+        let userName = $('input').val()
+        if(userName == e.data){
+            $('span').text(` vaild: ${e.data}`).show().fadeOut(1000)
+        }
+        else $('span').text(` invaild: ${userName}`)
+    })
+})
+</script>
+
+<form>
+    <input type='text' name='userName' placeholder='사용자명'/><span></span><br>
+    <button type='button'>submit</button>
+</form>

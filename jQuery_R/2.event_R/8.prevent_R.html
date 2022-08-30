@@ -1,0 +1,11 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('a').click(e => {
+        e.preventDefault()  // preventDefault - 해당 이벤트의 기본핸들러를 작동하지않게 한다.
+        $('body').append('<p>prevent default handler</p>')
+    })
+})
+</script>
+
+<a href='https://jquery.com'>jquery</a>

@@ -1,10 +1,10 @@
-<script>                // error event에 대한 handler가된다.
-window.onerror = (msg, url, line, col, err) =>{ //onerror - 에러가났을때 이벤트
+<script>
+window.onerror = (msg, url, line, col, err) => {
     document.write(`${msg} <br>`)
     document.write(`at ${line}: ${col} of ${url}`)
     document.write('<hr>')
     document.write(err)
-}   
+}
 
 a   //ReferenceError : a is not defined
 </script>

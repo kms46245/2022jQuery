@@ -1,0 +1,26 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('div').on({
+            mousedown: () => $('div').css('background', 'red'),
+            mouseup: () => $('div').css('background', 'green'),
+            mouseout: () => $('div').css('background', '')
+    })
+
+    $('button').click(() => $('div').off('mouseup'))
+    // off(handler) - 해당 핸들러를 없앤다.
+})
+</script>
+
+<style>
+    div {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 2.5rem;
+        border: .1rem solid;
+        margin: 1rem;
+    }
+    </style>
+    
+    <div></div>
+    <button type='button'>remove</button>

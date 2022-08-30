@@ -1,0 +1,16 @@
+{
+    "fruits":[
+        {
+            "fruitName": "사과",
+            "price": "1000원",
+            "harvestDate": "2025/10/10",
+            "origin": "문경"
+        },
+        {
+            "fruitName": "딸기",
+            "price": "2000원",
+            "harvestDate": "2025/12/10",
+            "origin": "광주"
+        }
+    ]
+}

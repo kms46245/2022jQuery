@@ -1,0 +1,17 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('#one').click(() => $('span').text('one'))
+    //과제] one메세지가 1초뒤에 사라지도록 하라.
+    $('#one').click(() => $('span').text('one').show().fadeOut(1000))
+
+    //trigger(event) - 해당 콜렉션에 이벤트를 발생시킨다.
+    //$('two').click(() => $('#one').trigger('click'))
+    $('#two').click(() => $('#one').click())    // click을 비워서 call을 했기에 같은 결과가 나온다.
+
+})
+</script>
+
+<button type='button' id='one'>one</button>
+<button type='button' id='two'>two</button>
+<span></span>

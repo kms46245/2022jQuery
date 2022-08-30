@@ -1,0 +1,15 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('button').on('click', () => $('span').text(' clicked.'))
+    //on(event) - parameter event가 작동되면, 해당 이벤트를 작동시킨다.
+
+    // 해당 이벤트는 객체로서 여러개의 이벤트를 담을 수 도있다.
+    $('button').on({
+        mouseover: () => $('span').text(' mouseovered'),
+        mouseout: () => $('span').text(' mouseouted')
+    })
+})
+</script>
+
+<button type='button'>confirm</button><span></span>

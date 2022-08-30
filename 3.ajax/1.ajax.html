@@ -1,0 +1,31 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('button').click(() => {
+        $.ajax({
+            //url: '01.data.json', // error상황일시 error와 complete를 실행한다.
+            url: '1.data.json',
+            data: {id: 'yellow'}, // data는 해당id의 데이터를 literating하여 담아준다.
+            type: 'get',           // get은 reading하는 역할을 한다.
+            dataType: 'json',
+            success: (data, status, xhr) => {
+                $('<h3>').text(data.userName).appendTo('body')
+                $('<p>').html(status).appendTo('body')
+                console.log(xhr)
+            },
+            error: (xhr, status) => {
+                console.log('error: ', status)
+                console.log(xhr)
+            },
+            complete: (xhr, status) => {    // 성공실패여부를 떠나 꼭 해야하는작업(like finally)
+                console.log('comple: ', status)
+            }
+        })
+    })
+})
+</script>
+
+<button type='button'>click</button>
+
+<!-- Asychrous Javascript And Xml
+     이름은 이러하지만 현재는 xml대신 json을 쓴다.-->
